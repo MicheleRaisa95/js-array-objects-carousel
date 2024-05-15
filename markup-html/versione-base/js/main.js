@@ -139,6 +139,21 @@ nxtBtn.addEventListener('click',function(){
     aggiornaCarosello(currentIndex)
 });
 
+// Milestone 2
+
+setInterval(function() {
+    if (currentIndex === images.length - 1) {
+        // se currentindex è ultimo elemento dell' array torna al primo
+        currentIndex = 0;
+    } else {
+        // altrimenti passa al successivo
+        currentIndex = currentIndex + 1;
+    }
+    // invoco la funzione
+    aggiornaCarosello(currentIndex);
+    // cambio immagine ogni 3 secondi
+}, 3000)
+
 
 
 
